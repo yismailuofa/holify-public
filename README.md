@@ -1,6 +1,6 @@
 ## Description
 
-<a href="https://">Holify</a> is a free game where you can guess which songs are top hits. You are given two songs on the top charts and you can guess which one has the most streams.
+<a href="https://holify.netlify.app/">Holify</a> is a free game where you can guess which songs are top hits. You are given two songs on the top charts and you can guess which one has the most streams.
 
 ## Implementations
 
