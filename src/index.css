@@ -1,13 +1,184 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#title {
+  font-size: 3rem;
+  letter-spacing: -0.05rem;
+  margin-top: 0;
+  font-weight: 500;
+  transition: all 2s linear;
+}
+
+#score {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#cardcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+}
+
+.card {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: max(25vw, 250px);
+  width: max(25vw, 250px);
+  box-shadow: 0 0 30px #ccc;
+  border-radius: 5%;
+  background-size: contain;
+  transition: transform 0.5s ease-in-out, border 0.5s ease-in-out,
+    background-image 1s ease-in-out;
+  /* -webkit-transition: background-image 0.5s ease-in-out; */
+}
+
+.card:hover {
+  transform: scale(1.03);
+  border: rgb(172, 172, 172) solid 5px;
+  cursor: pointer;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  width: max(40vw, 300px);
+}
+
+.desc {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 200;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.final {
+  font-size: 4rem;
+  margin-top: 5rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.start {
+  font-size: 4rem;
+  margin-top: 5rem;
+  font-weight: 200;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
+  border: rgb(0, 0, 0) solid 3px;
+  transition: transform 0.3s;
+}
+
+.start:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.black {
+  border: rgb(0, 0, 0) solid 5px;
+}
+
+.red {
+  border: rgb(255, 0, 0) solid 5px !important;
+}
+
+.green {
+  border: rgb(0, 255, 21) solid 5px !important;
+}
+
+.counter {
+  margin-top: auto;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.next {
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: rgb(0, 0, 0) solid 3px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.next.hide {
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+.replay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.replay.hide {
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+
+.wrong {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.again {
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: rgb(0, 0, 0) solid 3px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  text-align: center;
 }
